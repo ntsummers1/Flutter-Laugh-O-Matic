@@ -10,4 +10,11 @@ class JokeModel extends Joke {
   factory JokeModel.fromJson(Map<String, dynamic> json) {
     return JokeModel(setup: json['setup'], punchline: json['punchline']);
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'setup': setup,
+      'punchline': setup,
+    };
+  }
 }
