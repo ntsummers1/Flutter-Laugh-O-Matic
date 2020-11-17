@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:myapp/core/error/exception.dart';
 import 'package:myapp/core/error/failures.dart';
-import 'package:myapp/core/platform/network_info.dart';
+import 'package:myapp/core/network/network_info.dart';
 import 'package:myapp/features/joke/data/datasources/joke_local_data_source.dart';
 import 'package:myapp/features/joke/data/datasources/joke_remote_data_source.dart';
 import 'package:myapp/features/joke/data/models/joke_model.dart';
