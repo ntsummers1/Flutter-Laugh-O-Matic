@@ -6,4 +6,8 @@ class JokeModel extends Joke {
     @required String setup,
     @required String punchline,
   }) : super(setup: setup, punchline: punchline);
+
+  factory JokeModel.fromJson(Map<String, dynamic> json) {
+    return JokeModel(setup: json['setup'], punchline: json['punchline']);
+  }
 }
