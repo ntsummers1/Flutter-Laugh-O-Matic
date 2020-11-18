@@ -1,4 +1,3 @@
-import 'package:myapp/features/joke/domain/usecases/get_random_joke.dart';
 import 'package:myapp/features/joke/presentation/bloc/joke_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
