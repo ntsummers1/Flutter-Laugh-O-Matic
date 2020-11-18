@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'package:myapp/features/joke/presentation/pages/joke_page.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await di.init();
   runApp(MyApp());
 }
@@ -10,15 +11,13 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(child: Text(wordPair.asPascalCase)),
+      title: 'Joke Generator',
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+        accentColor: Colors.purple,
       ),
+      home: JokePage(),
     );
   }
 }
