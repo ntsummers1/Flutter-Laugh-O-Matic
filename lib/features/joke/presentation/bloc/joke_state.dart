@@ -1,8 +1,7 @@
 part of 'joke_bloc.dart';
 
+@immutable
 abstract class JokeState extends Equatable {
-  const JokeState();
-
   @override
   List<Object> get props => [];
 }
@@ -15,10 +14,16 @@ class Loaded extends JokeState {
   final Joke joke;
 
   Loaded({@required this.joke});
+
+  @override
+  List<Object> get props => [joke];
 }
 
 class Error extends JokeState {
   final String errorMessage;
 
   Error({@required this.errorMessage});
+
+  @override
+  List<Object> get props => [errorMessage];
 }
