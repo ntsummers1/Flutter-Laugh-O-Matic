@@ -1,5 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/features/joke/presentation/pages/joke_page.dart';
+import 'package:myapp/routes/router.gr.dart' as Router;
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple,
         accentColor: Colors.purple,
       ),
-      home: JokePage(),
+      builder: ExtendedNavigator.builder<Router.Router>(
+          router: Router.Router(), initialRoute: "/"),
     );
   }
 }

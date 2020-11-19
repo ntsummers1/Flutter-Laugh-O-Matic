@@ -2,6 +2,7 @@ import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:myapp/core/network/network_info.dart';
+import 'package:myapp/features/helloworld/presentation/bloc/helloworld_bloc.dart';
 import 'package:myapp/features/joke/data/datasources/joke_local_data_source.dart';
 import 'package:myapp/features/joke/data/datasources/joke_remote_data_source.dart';
 import 'package:myapp/features/joke/data/repositories/joke_repository_impl.dart';
@@ -41,6 +42,13 @@ Future<void> init() async {
   sl.registerLazySingleton<JokeLocalDataSource>(
     () => JokeLocalDataSourceImpl(sharedPreferences: sl()),
   );
+
+  //! Features - HelloWorld
+  //Bloc
+  sl.registerFactory(
+    () => HelloworldBloc(),
+  );
+
   //! Core
   sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
 
