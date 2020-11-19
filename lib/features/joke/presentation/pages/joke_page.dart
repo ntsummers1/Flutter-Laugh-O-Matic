@@ -29,17 +29,17 @@ class JokePage extends StatelessWidget {
               // Top half
               BlocBuilder<JokeBloc, JokeState>(
                 builder: (context, state) {
-                  if (state is JokeInitial) {
-                    return MessageDisplay(
-                      message: 'Start Laughing!',
-                    );
-                  } else if (state is Loading) {
+                  if (state is Loading) {
                     return LoadingWidget();
                   } else if (state is Loaded) {
                     return JokeDisplay(joke: state.joke);
                   } else if (state is Error) {
                     return MessageDisplay(
                       message: state.errorMessage,
+                    );
+                  } else {
+                    return MessageDisplay(
+                      message: 'Start Laughing!',
                     );
                   }
                 },
