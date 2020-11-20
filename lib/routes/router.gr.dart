@@ -41,6 +41,7 @@ class Router extends RouterBase {
       return MaterialPageRoute<dynamic>(
         builder: (context) => HelloWorldPage(),
         settings: data,
+        fullscreenDialog: true,
       );
     },
   };

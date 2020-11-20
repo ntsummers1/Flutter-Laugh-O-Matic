@@ -5,7 +5,7 @@ import 'package:myapp/features/joke/presentation/pages/joke_page.dart';
 @MaterialAutoRouter(
   routes: <AutoRoute>[
     MaterialRoute(page: JokePage, initial: true),
-    MaterialRoute(page: HelloWorldPage)
+    MaterialRoute(page: HelloWorldPage, fullscreenDialog: true)
   ],
   generateNavigationHelperExtension: true,
 )

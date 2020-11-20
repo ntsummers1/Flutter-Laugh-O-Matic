@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Joke Generator',
-      theme: ThemeData(
-        primaryColor: Colors.purple,
-        accentColor: Colors.purple,
-      ),
-      builder: ExtendedNavigator.builder<Router.Router>(
-          router: Router.Router(), initialRoute: "/"),
-    );
+        title: 'Joke Generator',
+        theme: ThemeData(
+          primaryColor: Colors.purple,
+          accentColor: Colors.purple,
+        ),
+        builder: ExtendedNavigator.builder<Router.Router>(
+            router: Router.Router(), initialRoute: "/"));
   }
 }
